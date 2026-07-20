@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BubbleSort</title>
+    <link rel="stylesheet" href="../css/bubbleSort.css" />
+  </head>
+  <body>
+    <header id="head">BUBBLE SORT VISUALIZER</header>
+    <div id="js-generatedArray">
+      <span>Array:[]</span>
+    </div>
+
+    <div class="workspace">
+      <div id="left-panel">
+        <div id="visualizer"></div>
+      </div>
+      <div id="right-panel">
+        <div id="right-main">
+          <div id="pseudocode-panel">
+            <h2>pseudocode</h2>
+            <div id="pseudocode">
+              <div class="pseudo-line" data-line="outer-loop">
+                for (i = 0; i < array.length - 1; i++)
+              </div>
+              <div class="pseudo-line indent-1" data-line="swapped-false">
+                swapped = false;
+              </div>
+              <div class="pseudo-line indent-1" data-line="inner-loop">
+                for (j = 0; j < array.length - 1 - i; j++)
+              </div>
+              <div class="pseudo-line indent-2" data-line="compare">
+                if (array[j] > array[j + 1])
+              </div>
+              <div class="pseudo-line indent-3" data-line="swap">
+                swap(array[j], array[j + 1])
+              </div>
+              <div class="pseudo-line indent-3" data-line="swapped-true">
+                swapped = true;
+              </div>
+              <div class="pseudo-line indent-1" data-line="check-swapped">
+                if (swapped == false)
+              </div>
+              <div class="pseudo-line indent-2" data-line="break">break;</div>
+            </div>
+          </div>
+          <div id="status-panel">
+            <h2>Algorithm-Status</h2>
+            <p id="status">Waiting to Start</p>
+          </div>
+        </div>
+        <div id="variables-panel">
+          <h2>VARIABLES</h2>
+          <div id="variables">
+            <div id="current-pass-value">Current Pass -</div>
+            <div id="swapped-value">swapped -</div>
+            <div id="i-value">i -</div>
+            <div id="j-value">j -</div>
+          </div>
+          <p id="variables-note">
+            Pass count starts at 1, while i and j start at 0.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div id="buttons">
+      <button id="generateButton">GENERATE</button>
+      <button id="startButton">START</button>
+      <button id="nextButton">NEXT</button>
+      <button id="previousButton">PREVIOUS</button>
+      <button id="resetButton">RESET</button>
+    </div>
+    <script src="../js/utils.js"></script>
+    <script src="../js/renderer.js"></script>
+    <script src="../js/bubbleSort.js"></script>
+  </body>
+</html>
