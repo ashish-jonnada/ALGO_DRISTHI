@@ -48,6 +48,7 @@ function renderStep(step) {
   updateStatus(step);
   highlightBar(step);
   highlightPseudocode(step);
+  updateVariables(step.variableState);
 }
 
 function renderArray(array) {
@@ -168,4 +169,17 @@ function highlightPseudocode(step) {
     currentLine.classList.add("active-line");
   }
   console.log(currentLine);
+}
+
+const currentPassValue = document.getElementById("current-pass-value");
+const swappedValue = document.getElementById("swapped-value");
+const iValue = document.getElementById("i-value");
+const jValue = document.getElementById("j-value");
+
+console.log(iValue);
+function updateVariables(variableState) {
+  currentPassValue.textContent = `Current Pass : ${variableState.currentPass}`;
+  swappedValue.textContent = `swapped : ${variableState.swapped}`;
+  iValue.textContent = `i : ${variableState.i}`;
+  jValue.textContent = `j : ${variableState.j}`;
 }
