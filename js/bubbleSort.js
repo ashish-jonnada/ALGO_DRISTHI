@@ -71,7 +71,7 @@ function bubbleSort(randomArray) {
   let steps = [];
   let isSorted = false;
   let completedPasses = 0;
-  let swapped;
+  let swapped = null;
   for (let i = 0; i < n - 1; i++) {
     recordStep(
       steps,
@@ -81,7 +81,7 @@ function bubbleSort(randomArray) {
         passNumber: i,
         currentI: i,
       },
-      createVariableState(i + 1, i, null, null),
+      createVariableState(i + 1, i, null, swapped),
     );
     swapped = false;
     recordStep(
@@ -338,4 +338,5 @@ resetbutton.addEventListener("click", () => {
     line.classList.remove("completed-line");
   });
   status.innerHTML = "waiting to start";
+  updateVariables({ currentPass: null, swapped: null, i: null, j: null });
 });
