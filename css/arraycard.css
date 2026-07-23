@@ -1,0 +1,486 @@
+/* =====================================================
+                MAIN WORKSPACE
+===================================================== */
+
+.workspace{
+
+    width:96%;
+    margin:18px auto;
+
+    display:grid;
+
+    grid-template-columns:1fr 0px;
+
+    gap:0;
+
+    align-items:start;
+
+    transition:
+        grid-template-columns .7s cubic-bezier(.22,.61,.36,1),
+        gap .7s cubic-bezier(.22,.61,.36,1);
+
+}
+
+/* =====================================================
+                LEFT PANEL
+===================================================== */
+
+#left-panel{
+
+    flex:1.5;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+     transition:
+        flex .6s cubic-bezier(.22,.61,.36,1);
+
+}
+
+/* =====================================================
+                GENERATED ARRAY CARD
+===================================================== */
+
+.array-card{
+
+    width:100%;
+
+    background:#141C27;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:14px;
+
+    padding:18px 22px;
+
+    box-sizing:border-box;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.25);
+
+}
+
+.array-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:18px;
+
+}
+
+.array-header h2{
+
+    color:#ffffff;
+
+    font-size:20px;
+
+    font-weight:600;
+
+    margin:0;
+
+}
+
+#array-size{
+
+    color:#3DDC84;
+
+    font-size:16px;
+
+    font-weight:600;
+
+}
+
+#js-generatedArray{
+
+    display:flex;
+
+    gap:12px;
+
+    flex-wrap:wrap;
+
+    align-items:center;
+
+    min-height:52px;
+
+}
+
+.array-box{
+
+    width:46px;
+
+    height:46px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#18222E;
+
+    border:1px solid rgba(61,220,132,.45);
+
+    border-radius:10px;
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:600;
+
+}
+
+/* =====================================================
+                VISUALIZER
+===================================================== */
+
+#visualizer{
+
+    width:100%;
+
+    height:440px;
+
+    background:#141C27;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:14px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-end;
+
+    padding:20px;
+
+    box-sizing:border-box;
+    max-width: 700px;
+    margin: 0 ;
+
+}
+
+/* =====================================================
+                RIGHT PANEL
+===================================================== */
+
+#right-panel{
+
+    width:450px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+    opacity:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+      opacity:0;
+
+    transform:translateX(80px) scale(.95);
+
+    transition:
+        opacity .6s ease,
+        transform .6s cubic-bezier(.22,.61,.36,1);
+
+    transition:all .6s ease;
+
+}
+
+/* =====================================================
+                COMMON PANEL
+===================================================== */
+
+#pseudocode-panel,
+#variables-panel,
+#status-panel{
+
+    background:#141C27;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:14px;
+
+    padding:24px;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.25);
+
+}
+
+#pseudocode-panel h2,
+#variables-panel h2,
+#status-panel h2{
+
+    margin:0 0 16px;
+
+    color:white;
+
+    font-size:20px;
+
+    font-weight:600;
+
+}
+#pseudocode-panel{
+
+    transition-delay:.05s;
+
+}
+
+#variables-panel{
+
+    transition-delay:.15s;
+
+}
+
+#status-panel{
+
+    transition-delay:.25s;
+
+}
+
+/* =====================================================
+                PSEUDOCODE
+===================================================== */
+
+#pseudocode{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+}
+
+.pseudo-line{
+
+    color:#C9D3DD;
+
+    font-size:15px;
+
+    line-height:1.5;
+
+}
+
+.indent-1{
+
+    padding-left:18px;
+
+}
+
+.indent-2{
+
+    padding-left:36px;
+
+}
+
+.indent-3{
+
+    padding-left:54px;
+
+}
+
+/* =====================================================
+                VARIABLES
+===================================================== */
+
+#variables{
+
+    display:grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap:12px;
+
+}
+
+#variables div{
+
+    background:#18222E;
+
+    border-radius:8px;
+
+    padding:10px 14px;
+
+    color:#DDE5EC;
+
+    font-size:14px;
+
+}
+
+#variables-note{
+
+    margin-top:16px;
+
+    color:#8E9BAA;
+
+    font-size:13px;
+
+    line-height:1.5;
+    grid-column:1 / -1;
+
+}
+
+/* =====================================================
+                STATUS
+===================================================== */
+
+#status{
+
+    color:#3DDC84;
+
+    font-size:15px;
+
+    font-weight:500;
+
+}
+
+/* ==========================================
+        GRAPH CONTAINER
+========================================== */
+
+.graph-container{
+
+    width:100%;
+    height:100%;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    align-items:center;
+
+}
+
+/* ==========================================
+        BARS CONTAINER
+========================================== */
+
+.bars-container{
+
+    width:100%;
+    height:340px;
+
+    display:flex;
+    justify-content:center;
+    align-items:flex-end;
+    gap:18px;
+
+}
+
+/* ==========================================
+        EACH COLUMN
+========================================== */
+
+.column{
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:flex-end;
+
+}
+
+/* ==========================================
+        VALUE ABOVE BAR
+========================================== */
+
+.value{
+
+    color:#ffffff;
+
+    font-size:15px;
+    font-weight:600;
+
+    margin-bottom:8px;
+
+}
+
+/* ==========================================
+        BAR
+========================================== */
+
+.bar{
+
+    width:42px;
+
+    background:#3B82F6;
+
+    border-radius:8px 8px 0 0;
+
+    transition:
+        height .35s ease,
+        background-color .35s ease;
+
+}
+
+/* ==========================================
+        INDEX CONTAINER
+========================================== */
+
+.index-container{
+
+    width:100%;
+
+    display:flex;
+    justify-content:center;
+
+    gap:18px;
+
+    margin-top:12px;
+
+}
+
+/* ==========================================
+        INDEX
+========================================== */
+
+.index{
+
+    width:42px;
+
+    text-align:center;
+
+    color:#94A3B8;
+
+    font-size:14px;
+
+    font-weight:500;
+
+}
+
+/* ==========================================
+        LEARNING MODE
+========================================== */
+
+.workspace.learning-mode #left-panel{
+
+    flex:2;
+
+    transition:flex .6s ease;
+
+}
+
+.workspace.learning-mode #right-panel{
+
+    width:400px;
+
+    opacity:1;
+     
+
+    transform:translateX(0) scale(1);
+
+    pointer-events:auto;
+
+    transform:translateX(0);
+
+}

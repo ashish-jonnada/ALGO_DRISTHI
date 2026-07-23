@@ -10,7 +10,7 @@ function createGraphContainer() {
   return graphContainer;
 }
 
-const SCALE_FACTOR = 9;
+const SCALE_FACTOR = 6;
 function renderBars(randomArray, graphContainer) {
   const barsContainer = document.createElement("div");
   barsContainer.className = "bars-container";

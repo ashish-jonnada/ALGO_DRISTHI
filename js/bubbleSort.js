@@ -34,8 +34,10 @@ function unhideButtons() {
 
 const rightpanel = document.querySelector("#right-panel");
 
+const workspace = document.querySelector(".workspace");
+
 function unhidePanel() {
-  rightpanel.style.display = "flex";
+  workspace.classList.add("learning-mode");
 }
 
 function hideButtons() {

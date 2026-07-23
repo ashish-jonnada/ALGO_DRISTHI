@@ -14,7 +14,19 @@ function generateRandomArray() {
 
 function displayArray(randomArray) {
   const generatedArray = document.querySelector("#js-generatedArray");
-  generatedArray.innerHTML = `Array: [ ${randomArray} ]`;
+
+  generatedArray.innerHTML = "";
+
+  randomArray.forEach((value) => {
+    const box = document.createElement("div");
+    box.className = "array-box";
+    box.textContent = value;
+
+    generatedArray.appendChild(box);
+  });
+
+  document.querySelector("#array-size").textContent =
+    `Size : ${randomArray.length}`;
 }
 
 function swap(randomArray, i, j) {
