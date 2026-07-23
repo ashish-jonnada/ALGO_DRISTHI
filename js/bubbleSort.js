@@ -24,6 +24,14 @@ start.addEventListener("click", () => {
   unhideButtons();
   hideButtons();
   unhidePanel();
+  currentStep = 0;
+
+  const step = result.steps[currentStep];
+  renderStep(step);
+
+  if (result.steps.length === 1) {
+    next.disabled = true;
+  }
 });
 
 function unhideButtons() {
@@ -73,7 +81,32 @@ function bubbleSort(randomArray) {
   let steps = [];
   let isSorted = false;
   let completedPasses = 0;
-  let swapped;
+  let swapped = null;
+  if (n <= 1) {
+    recordStep(
+      steps,
+      randomArray,
+      {
+        type: "outer-loop",
+        passNumber: 0,
+        currentI: 0,
+      },
+      createVariableState(1, 0, null, null),
+    );
+
+    recordStep(
+      steps,
+      randomArray,
+      {
+        type: "sorted",
+        passNumber: 0,
+        reason: "Single-ELement",
+      },
+      createVariableState(1, 0, null, null),
+    );
+
+    return { originalArray, randomArray, steps };
+  }
   for (let i = 0; i < n - 1; i++) {
     recordStep(
       steps,
@@ -83,7 +116,7 @@ function bubbleSort(randomArray) {
         passNumber: i,
         currentI: i,
       },
-      createVariableState(i + 1, i, null, null),
+      createVariableState(i + 1, i, null, swapped),
     );
     swapped = false;
     recordStep(
@@ -330,14 +363,14 @@ previous.addEventListener("click", () => {
 });
 
 resetbutton.addEventListener("click", () => {
-  currentStep = -1;
-  const originalArray = result.originalArray;
+  currentStep = 0;
+
   previous.disabled = true;
   next.disabled = false;
-  renderArray(originalArray);
-  Pseudocodelines.forEach((line) => {
-    line.classList.remove("active-line");
-    line.classList.remove("completed-line");
-  });
-  status.innerHTML = "waiting to start";
+
+  renderStep(result.steps[0]);
+
+  if (result.steps.length === 1) {
+    next.disabled = true;
+  }
 });

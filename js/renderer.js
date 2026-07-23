@@ -178,8 +178,25 @@ const jValue = document.getElementById("j-value");
 
 console.log(iValue);
 function updateVariables(variableState) {
-  currentPassValue.textContent = `Current Pass : ${variableState.currentPass}`;
-  swappedValue.textContent = `swapped : ${variableState.swapped}`;
-  iValue.textContent = `i : ${variableState.i}`;
-  jValue.textContent = `j : ${variableState.j}`;
+  console.log(currentPassValue);
+  if (variableState.currentPass === null) {
+    currentPassValue.textContent = `Current Pass : — `;
+  } else {
+    currentPassValue.textContent = `Current Pass : ${variableState.currentPass}`;
+  }
+  if (variableState.swapped === null) {
+    swappedValue.textContent = `swapped : — `;
+  } else {
+    swappedValue.textContent = `swapped : ${variableState.swapped}`;
+  }
+  if (variableState.i === null) {
+    iValue.textContent = `i : —`;
+  } else {
+    iValue.textContent = `i : ${variableState.i}`;
+  }
+  if (variableState.j === null) {
+    jValue.textContent = `j : —`;
+  } else {
+    jValue.textContent = `j : ${variableState.j}`;
+  }
 }
