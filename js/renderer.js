@@ -148,6 +148,7 @@ function updateStatus(step) {
 
 const Pseudocodelines = document.querySelectorAll(".pseudo-line");
 function highlightPseudocode(step) {
+  console.log(step.type);
   Pseudocodelines.forEach((line) => {
     line.classList.remove("active-line");
     line.classList.remove("completed-line");
@@ -164,6 +165,7 @@ function highlightPseudocode(step) {
   if (lineType === "swap-needed" || lineType === "no-swap") {
     lineType = "compare";
   }
+  
   const currentLine = document.querySelector(`[data-line="${lineType}"]`);
   if (currentLine) {
     currentLine.classList.add("active-line");
