@@ -129,8 +129,7 @@ function updateStatus(step) {
       status.innerHTML = `Checking the next pair of elements.`;
       break;
     case "swapped-true":
-      status.innerHTML = `A swap happened in this pass.
-      We'll keep checking the remaining elements.`;
+      status.innerHTML = `Swap completed successfully.`;
       break;
     case "check-swapped":
       status.innerHTML = `Checking whether any swaps happened in this pass.`;
@@ -170,7 +169,6 @@ function highlightPseudocode(step) {
   if (currentLine) {
     currentLine.classList.add("active-line");
   }
-  console.log(currentLine);
 }
 
 const currentPassValue = document.getElementById("current-pass-value");
@@ -178,9 +176,7 @@ const swappedValue = document.getElementById("swapped-value");
 const iValue = document.getElementById("i-value");
 const jValue = document.getElementById("j-value");
 
-console.log(iValue);
 function updateVariables(variableState) {
-  console.log(currentPassValue);
   if (variableState.currentPass === null) {
     currentPassValue.textContent = `Current Pass : — `;
   } else {

@@ -36,8 +36,6 @@ function swap(randomArray, i, j) {
 }
 
 function recordStep(steps, randomArray, stepData, variableChanges) {
-  console.log(stepData);
-  console.log(variableChanges);
   steps.push({
     ...stepData,
     arrayState: [...randomArray],
