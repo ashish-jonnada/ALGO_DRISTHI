@@ -8,154 +8,191 @@
     <link rel="stylesheet" href="../css/bobble.css" />
     <link rel="stylesheet" href="../css/bobblesort1.css" />
     <link rel="stylesheet" href="../css/arraycard.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="stylesheet" href="../css/buttons.css" />
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="navbar">
       <div class="nav-left">
-      <button class="menu-button"><img class="menu-img" src="../assets/menu.png" ></button>
-      <a href="#" id="logo">
-    <span class="logo-white">Algo</span>
-    <span class="logo-green">Dristhi</span>
-</a>
+        <button class="menu-button">
+          <img class="menu-img" src="../assets/menu.png" />
+        </button>
+        <a href="#" id="logo">
+          <span class="logo-white">Algo</span>
+          <span class="logo-green">Dristhi</span>
+        </a>
       </div>
-      
+
       <div class="nav-middle">
-        <div><img class="home"  src="../assets/home1.png">
-        <a>home</a></div>
+        <div><img class="home" src="../assets/home1.png" /> <a>home</a></div>
         <div>
-          <img class="book" src="../assets/book.png">
+          <img class="book" src="../assets/book.png" />
           <a>Learn</a>
         </div>
-         <div>
-          <img  class="pencil" src="../assets/pencil.png">
-          <a>practice</a>
-
-         </div>
         <div>
-          <img class="trend" src="../assets/trend.png">
-          <a>Visualize</a>
-
+          <img class="pencil" src="../assets/pencil.png" />
+          <a>practice</a>
         </div>
         <div>
-          <img class="info" src="../assets/info.png">
+          <img class="trend" src="../assets/trend.png" />
+          <a>Visualize</a>
+        </div>
+        <div>
+          <img class="info" src="../assets/info.png" />
           <a>About</a>
         </div>
-        
-
       </div>
-
 
       <div class="nav-right">
         <button class="login-button">Login</button>
-        <img  class="longbook" src="../assets/longbook.png">
+        <img class="longbook" src="../assets/longbook.png" />
         <!-- <button id="login-button">Login</button> -->
       </div>
     </div>
     <section class="algorithm-card">
-
-    <div class="algorithm-left">
-
+      <div class="algorithm-left">
         <div class="algorithm-icon">
-            <img class="bimg" src="../assets/bobblesortlogo.png" alt="Bubble Sort">
+          <img
+            class="bimg"
+            src="../assets/bobblesortlogo.png"
+            alt="Bubble Sort"
+          />
         </div>
 
         <div class="algorithm-details">
+          <div class="algorithm-title">
+            <h1>Bubble Sort</h1>
 
-            <div class="algorithm-title">
+            <span class="algorithm-tag"> Comparison Sort </span>
+          </div>
 
-                <h1>Bubble Sort</h1>
-
-                <span class="algorithm-tag">
-                    Comparison Sort
-                </span>
-
-            </div>
-
-            <p>
-                Bubble Sort repeatedly compares adjacent elements and swaps them
-                if they are in the wrong order.
-            </p>
-
+          <p>
+            Bubble Sort repeatedly compares adjacent elements and swaps them if
+            they are in the wrong order.
+          </p>
         </div>
+      </div>
 
-    </div>
-
-    <div class="algorithm-right">
-
+      <div class="algorithm-right">
         <div class="info-card">
+          <img class="time" src="../assets/time1.png" />
 
-            <img src="../assets/time.png">
+          <div>
+            <span>Time Complexity</span>
 
-            <div>
-
-                <span>Time Complexity</span>
-
-                <h3>O(n²)</h3>
-
-            </div>
-
+            <h3>O(n²)</h3>
+          </div>
         </div>
 
         <div class="info-card">
+          <img class="cube" src="../assets/cube2.png" />
 
-            <img src="../assets/cube.png">
+          <div>
+            <span>Space Complexity</span>
 
-            <div>
-
-                <span>Space Complexity</span>
-
-                <h3>O(1)</h3>
-
-            </div>
-
+            <h3>O(1)</h3>
+          </div>
         </div>
 
         <div class="info-card">
+          <img src="../assets/done.png" />
 
-            <img src="../assets/done.png">
+          <div>
+            <span>Stable</span>
 
-            <div>
-
-                <span>Stable</span>
-
-                <h3>Yes</h3>
-
-            </div>
-
+            <h3>Yes</h3>
+          </div>
         </div>
+      </div>
+    </section>
 
-    </div>
+    <section class="array-card">
+      <div class="array-header">
+        <h2>Generated Array</h2>
+        <div id="js-generatedArray"></div>
+        <span id="array-size">Size : 0</span>
+      </div>
 
-</section>
-
-
-        <section class="array-card">
-
-            <div class="array-header">
-
-                <h2>Generated Array</h2>
-
-                <span id="array-size">Size : 0</span>
-
-            </div>
-
-            <div id="js-generatedArray"></div>
-
-        </section>
-<div class="workspace">
-
-    <!-- LEFT SIDE -->
-    <div id="left-panel">
-
-
+      
+    </section>
+    <div class="workspace">
+      <!-- LEFT SIDE -->
+      <div id="left-panel">
         <!-- Visualization -->
         <div id="visualizer"></div>
+      </div>
 
-            <div id="buttons">
+      <!-- RIGHT SIDE -->
+      <div id="right-panel">
+        <!-- Pseudocode -->
+        <div id="pseudocode-panel">
+          <h2>Pseudocode</h2>
+
+          <div id="pseudocode">
+            <div class="pseudo-line" data-line="outer-loop">
+              for (i = 0; i &lt; array.length - 1; i++)
+            </div>
+
+            <div class="pseudo-line indent-1" data-line="swapped-false">
+              swapped = false;
+            </div>
+
+            <div class="pseudo-line indent-1" data-line="inner-loop">
+              for (j = 0; j &lt; array.length - 1 - i; j++)
+            </div>
+
+            <div class="pseudo-line indent-2" data-line="compare">
+              if (array[j] &gt; array[j + 1])
+            </div>
+
+            <div class="pseudo-line indent-3" data-line="swap">
+              swap(array[j], array[j + 1])
+            </div>
+
+            <div class="pseudo-line indent-3" data-line="swapped-true">
+              swapped = true;
+            </div>
+
+            <div class="pseudo-line indent-1" data-line="check-swapped">
+              if (swapped == false)
+            </div>
+
+            <div class="pseudo-line indent-2" data-line="break">break;</div>
+          </div>
+        </div>
+
+        <!-- Variables -->
+        <div id="variables-panel">
+          <h2>Variables</h2>
+
+          <div id="variables">
+            <div id="current-pass-value">Current Pass -</div>
+
+            <div id="swapped-value">swapped -</div>
+
+            <div id="i-value">i -</div>
+
+            <div id="j-value">j -</div>
+          </div>
+
+          <p id="variables-note">
+            Pass count starts at 1, while i and j start at 0.
+          </p>
+        </div>
+
+        <!-- Algorithm Status -->
+        <div id="status-panel">
+          <h2>Algorithm Status</h2>
+
+          <p id="status">Waiting to Start</p>
+        </div>
+      </div>
+    </div>
+    <div id="buttons">
       <button id="generateButton">GENERATE</button>
       <button id="startButton">START</button>
       <button id="nextButton">NEXT</button>
@@ -163,96 +200,6 @@
       <button id="resetButton">RESET</button>
     </div>
 
-    </div>
- 
-
-    <!-- RIGHT SIDE -->
-    <div id="right-panel">
-
-        <!-- Pseudocode -->
-        <div id="pseudocode-panel">
-
-            <h2>Pseudocode</h2>
-
-            <div id="pseudocode">
-
-                <div class="pseudo-line" data-line="outer-loop">
-                    for (i = 0; i &lt; array.length - 1; i++)
-                </div>
-
-                <div class="pseudo-line indent-1" data-line="swapped-false">
-                    swapped = false;
-                </div>
-
-                <div class="pseudo-line indent-1" data-line="inner-loop">
-                    for (j = 0; j &lt; array.length - 1 - i; j++)
-                </div>
-
-                <div class="pseudo-line indent-2" data-line="compare">
-                    if (array[j] &gt; array[j + 1])
-                </div>
-
-                <div class="pseudo-line indent-3" data-line="swap">
-                    swap(array[j], array[j + 1])
-                </div>
-
-                <div class="pseudo-line indent-3" data-line="swapped-true">
-                    swapped = true;
-                </div>
-
-                <div class="pseudo-line indent-1" data-line="check-swapped">
-                    if (swapped == false)
-                </div>
-
-                <div class="pseudo-line indent-2" data-line="break">
-                    break;
-                </div>
-
-            </div>
-
-        </div>
-
-        <!-- Variables -->
-        <div id="variables-panel">
-
-            <h2>Variables</h2>
-
-            <div id="variables">
-
-                <div id="current-pass-value">Current Pass -</div>
-
-                <div id="swapped-value">swapped -</div>
-
-                <div id="i-value">i -</div>
-
-                <div id="j-value">j -</div>
-
-            </div>
-
-            <p id="variables-note">
-                Pass count starts at 1, while i and j start at 0.
-            </p>
-
-        </div>
-
-        <!-- Algorithm Status -->
-        <div id="status-panel">
-
-            <h2>Algorithm Status</h2>
-
-            <p id="status">Waiting to Start</p>
-
-        </div>
-
-    </div>
-
-</div>
-
-
-    
-        
-
-   
     <script src="../js/utils.js"></script>
     <script src="../js/renderer.js"></script>
     <script src="../js/bubbleSort.js"></script>
