@@ -6,13 +6,13 @@
 
     width:96%;
 
-    margin:18px auto;
+    margin:10px auto;
 
     display:flex;
 
     align-items:flex-start;
 
-    gap:0;
+    gap:16px;
 
 }
 
@@ -28,7 +28,7 @@
 
     flex-direction:column;
 
-    gap:20px;
+    gap:14px;
 
     transition:flex .7s cubic-bezier(.22,.61,.36,1);
 
@@ -48,7 +48,7 @@
 
     border-radius:14px;
 
-    padding:18px 22px;
+    padding:12px 18px;
 
     box-sizing:border-box;
 
@@ -64,7 +64,7 @@
 
     align-items:center;
 
-    margin-bottom:18px;
+    margin-bottom:10px;
 
 }
 
@@ -100,15 +100,15 @@
 
     align-items:center;
 
-    min-height:52px;
+    min-height:40px;
 
 }
 
 .array-box{
 
-    width:46px;
+    width:40px;
 
-    height:46px;
+    height:40px;
 
     display:flex;
 
@@ -138,7 +138,7 @@
 
     width:100%;
 
-    height:700px;
+    height:600px;
 
     background:#141C27;
 
@@ -165,7 +165,7 @@
 ===================================================== */
 
 #right-panel{
-
+   flex: 0;
     width:0;
 
     opacity:0;
@@ -175,6 +175,8 @@
     pointer-events:none;
 
     transform:translateX(60px);
+    height:0;          /* ADD */
+    min-height:0;
 
     transition:
         width .7s cubic-bezier(.22,.61,.36,1),
@@ -197,7 +199,7 @@
 
     border-radius:14px;
 
-    padding:25px;
+    padding:16px;
 
     box-shadow:0 8px 25px rgba(0,0,0,.25);
 
@@ -219,18 +221,18 @@
 #pseudocode-panel{
     
     transition-delay:.05s;
-    max-height: 500px;
+    max-height: 340px;
 
 }
 
 #variables-panel{
-    height: 12git status0px;
+    
     transition-delay:.15s;
 
 }
 
 #status-panel{
-   height: 100px;
+   min-height: 90px;
     transition-delay:.25s;
 
 }
@@ -245,7 +247,7 @@
 
     flex-direction:column;
 
-    gap:10px;
+    gap:14px;
 
 }
 
@@ -355,7 +357,7 @@
 .bars-container{
 
     width:100%;
-    height:340px;
+    height:20px;
 
     display:flex;
     justify-content:center;
@@ -455,19 +457,11 @@
 
 .workspace.learning-mode{
 
-    gap:24px;
+    gap:14px;
 
 }
 
-.workspace.learning-mode #right-panel{
 
-    opacity:1;
-
-    pointer-events:auto;
-
-    transform:translateX(0);
-
-}
 .workspace.learning-mode #left-panel{
 
     flex:0 0 60%;
@@ -476,9 +470,11 @@
 
 .workspace.learning-mode #right-panel{
 
-    flex: 1;
-
-    opacity:1;
+ flex:0 0 40%;
+    width:40%;
+    max-width:40%;
+    opacity: 1;
+    height:auto;
 
     pointer-events:auto;
 
