@@ -90,6 +90,8 @@
 
     color:white;
 
+    
+
 }
 
 #nextButton:hover{
@@ -157,3 +159,14 @@
     opacity:.65;
 
 }
+
+#nextButton{
+    display: none;
+}
+#previousButton{
+    display: none;
+}
+#resetButton{
+    display: none;
+} 
+
