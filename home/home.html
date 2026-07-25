@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../css/bobble.css" />
-    <link rel="stylesheet" href="../homew/home.css" />
+    <link rel="stylesheet" href="../home/home.css" />
     <script src="../js/home.js" defer></script>
 </head>
 <body>
@@ -108,19 +108,22 @@
     <div class="topics-grid">
 
         <div class="topic-card">
-            <img src="../assets/icons/sorting.png" alt="">
+            <div ><img  src="../assets/sorting.png" alt=""></div>
             <h3>Sorting</h3>
             <span class="card-arrow">→</span>
         </div>
 
         <div class="topic-card">
-            <img src="../assets/icons/searching.png" alt="">
+            <div class="image"><img src="../assets/search.png" alt=""></div>
+            
             <h3>Searching</h3>
             <span class="card-arrow">→</span>
         </div>
 
         <div class="topic-card">
-            <img src="../assets/icons/linked-list.png" alt="">
+            <div class="image">
+            <img  class="linkedlistimage" src="../assets/linkedlist.png" alt="">
+            </div>
             <h3>Linked List</h3>
             <span class="card-arrow">→</span>
         </div>
@@ -184,63 +187,32 @@
 </section>
 
 
-<footer class="footer">
+<section class="cta-footer">
 
-    <div class="footer-container">
+    <div class="cta-left">
 
-        <!-- Logo & Description -->
-        <div class="footer-about">
-
-            <h2>
-                <span>Algo</span>Drishti
-            </h2>
-
-            <p>
-                Learn Data Structures & Algorithms through interactive
-                visualizations, animations and step-by-step execution.
-            </p>
-
+        <div class="cta-icon">
+            <img src="../assets/icons/rocket.png" alt="Rocket">
         </div>
 
-        <!-- Quick Links -->
-        <div class="footer-links">
+        <div class="cta-text">
 
-            <h3>Quick Links</h3>
+            <h3>Start your DSA journey today!</h3>
 
-            <a href="home.html">Home</a>
-            <a href="#">Learn</a>
-            <a href="#">Practice</a>
-            <a href="#">Visualize</a>
-
-        </div>
-
-        <!-- DSA -->
-        <div class="footer-links">
-
-            <h3>DSA Topics</h3>
-
-            <a href="#">Sorting</a>
-            <a href="#">Searching</a>
-            <a href="#">Trees</a>
-            <a href="#">Graphs</a>
-
-        </div>
-
-        <!-- Contact -->
-        <div class="footer-links">
-
-            <h3>Connect</h3>
-
-            <a href="#">GitHub</a>
-            <a href="#">LinkedIn</a>
-            <a href="#">Contact</a>
-            <a href="#">About</a>
+            <p>Learn. Practice. Visualize. Master.</p>
 
         </div>
 
     </div>
 
-    <div class="footer-bottom">
+    <button class="cta-btn">
+
+        Explore Visualizer
+
+        <span>→</span>
+
+    </button>
+        <div class="footer-bottom">
 
         <p>
             © 2026 AlgoDrishti. Built with ❤️ by Team Drishti.
@@ -248,7 +220,10 @@
 
     </div>
 
-</footer>
+</section>
+
+
+
     
 </body>
 </html>

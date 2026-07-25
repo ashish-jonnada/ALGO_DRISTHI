@@ -1,8 +1,7 @@
 .hero{
 
     width:96%;
-    margin:20px auto;
-    
+    margin-bottom: 0px;
     display:flex;
     justify-content:space-between;
     align-items:center;
@@ -46,7 +45,6 @@
 
     color:#3DDC84;
 
-    margin-bottom:25px;
 
 }
 
@@ -132,7 +130,7 @@
 .hero-placeholder{
 
     width:550px;
-    height:350px;
+    height:320px;
 
     border:2px dashed rgba(61,220,132,.3);
 
@@ -153,9 +151,9 @@
 ================================ */
 
 .topics-section{
-
+   
     width:96%;
-    margin:10px auto 40px;
+    margin:5px auto 0px;
 
 }
 
@@ -257,7 +255,7 @@
 
 }
 .topic-card img{
-
+    
     transition:transform .35s ease;
 
 }
@@ -323,6 +321,15 @@
     margin-bottom:10px;
 
 }
+.image{
+    display: flex;
+    justify-content: center;
+
+    transform: translateY(20px);
+}
+.linkedlistimage{
+    height: 200px;
+}
 
 /* ================================
             TITLE
@@ -338,109 +345,161 @@
 
 }
 
-/* ==========================================
-                FOOTER
-========================================== */
+/* ===========================================
+                CTA FOOTER
+=========================================== */
 
-.footer{
-
-    width:100%;
-
-    margin-top:80px;
-
-    background:#101722;
-
-    border-top:1px solid rgba(255,255,255,.08);
-
-}
-
-.footer-container{
+.cta-footer{
 
     width:96%;
+    margin:5px auto 10px;
+    height: 90px;
+    background:#0E1621;
 
-    margin:auto;
+    border:1px solid rgba(255,255,255,.08);
 
-    padding:60px 0;
+    border-radius:14px;
 
-    display:grid;
-
-    grid-template-columns:2fr 1fr 1fr 1fr;
-
-    gap:60px;
-
-}
-
-/* ==========================================
-                ABOUT
-========================================== */
-
-.footer-about h2{
-
-    font-size:36px;
-
-    color:white;
-
-    margin-bottom:20px;
-
-}
-
-.footer-about span{
-
-    color:#22C55E;
-
-}
-
-.footer-about p{
-
-    color:#AEB8C4;
-
-    line-height:1.8;
-
-    max-width:420px;
-
-}
-
-/* ==========================================
-                LINKS
-========================================== */
-
-.footer-links h3{
-
-    color:white;
-
-    margin-bottom:22px;
-
-    font-size:20px;
-
-}
-
-.footer-links{
+    padding:16px 22px;
 
     display:flex;
 
-    flex-direction:column;
+    justify-content:space-between;
+
+    align-items:center;
+
+    box-sizing:border-box;
+
+    transition:.35s ease;
 
 }
 
-.footer-links a{
+.cta-footer:hover{
 
-    color:#AEB8C4;
+    border-color:rgba(34,197,94,.35);
 
-    text-decoration:none;
+    box-shadow:0 12px 35px rgba(34,197,94,.08);
 
-    margin-bottom:14px;
+}
+
+/* ================= LEFT ================= */
+
+.cta-left{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+.cta-icon{
+
+    width:48px;
+
+    height:48px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.cta-icon img{
+
+    width:38px;
+
+    height:38px;
+
+    object-fit:contain;
+
+}
+
+/* ================= TEXT ================= */
+
+.cta-text h3{
+
+    color:#ffffff;
+
+    font-size:20px;
+
+    margin:0 0 6px;
+
+    font-weight:600;
+
+}
+
+.cta-text p{
+
+    color:#94A3B8;
+
+    margin:0;
+
+    font-size:15px;
+
+}
+
+/* ================= BUTTON ================= */
+
+.cta-btn{
+
+    display:flex;
+    
+    align-items:center;
+
+    gap:12px;
+
+    padding:14px 28px;
+
+    background:#22C55E;
+
+    color:#ffffff;
+
+    border:none;
+
+    border-radius:10px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s ease;
+
+}
+
+.cta-btn:hover{
+
+    background:#16A34A;
+
+    transform:translateY(-2px);
+
+}
+
+.cta-btn span{
+
+    font-size:20px;
 
     transition:.3s;
 
 }
 
-.footer-links a:hover{
+.cta-btn:hover span{
 
-    color:#22C55E;
-
-    transform:translateX(6px);
+    transform:translateX(5px);
 
 }
+
+
+
+
+
+
+
 
 /* ==========================================
             BOTTOM
