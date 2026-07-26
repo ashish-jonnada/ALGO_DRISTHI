@@ -6,29 +6,6 @@ const previous = document.querySelector("#previousButton");
 
 const resetbutton = document.querySelector("#resetButton");
 
-const generate = document.querySelector("#generateButton");
-
-let startBool = false;
-if (!startBool) {
-  start.disabled = true;
-}
-let result;
-generate.addEventListener("click", () => {
-  startBool = true;
-  if (startBool) {
-    start.disabled = false;
-  }
-  const randomArray = generateRandomArray();
-  const graphContainer = createGraphContainer();
-
-  renderBars(randomArray, graphContainer);
-  renderIndices(randomArray, graphContainer);
-  displayArray(randomArray);
-
-  result = bubbleSort(randomArray);
-  // console.log(result.steps);
-});
-
 start.addEventListener("click", () => {
   unhideButtons();
   hideButtons();

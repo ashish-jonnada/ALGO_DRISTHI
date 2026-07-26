@@ -10,8 +10,9 @@ function createGraphContainer() {
   return graphContainer;
 }
 
-const SCALE_FACTOR = 12;
+const MAX_BAR_HEIGHT = 300;
 function renderBars(randomArray, graphContainer) {
+  const maxValue = Math.max(...randomArray);
   const barsContainer = document.createElement("div");
   barsContainer.className = "bars-container";
   for (const nums of randomArray) {
@@ -25,7 +26,9 @@ function renderBars(randomArray, graphContainer) {
     column.appendChild(span);
     column.appendChild(bar);
     barsContainer.appendChild(column);
-    bar.style.height = `${nums * SCALE_FACTOR}px`;
+    const barHeight = (nums / maxValue) * MAX_BAR_HEIGHT;
+
+    bar.style.height = `${barHeight}px`;
   }
   graphContainer.appendChild(barsContainer);
 }
@@ -164,7 +167,7 @@ function highlightPseudocode(step) {
   if (lineType === "swap-needed" || lineType === "no-swap") {
     lineType = "compare";
   }
-  
+
   const currentLine = document.querySelector(`[data-line="${lineType}"]`);
   if (currentLine) {
     currentLine.classList.add("active-line");

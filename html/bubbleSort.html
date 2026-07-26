@@ -14,6 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="../css/popup.css" />
   </head>
   <body>
     <div class="navbar">
@@ -116,8 +117,6 @@
         <div id="js-generatedArray"></div>
         <span id="array-size">Size : 0</span>
       </div>
-
-      
     </section>
     <div class="workspace">
       <!-- LEFT SIDE -->
@@ -200,8 +199,55 @@
       <button id="resetButton">RESET</button>
     </div>
 
+    <div id="generatePopUp">
+      <div class="popup-container">
+        <div class="popup-header">
+          <h3>Configure Array</h3>
+          <button class="closeButton">&times;</button>
+        </div>
+        <div class="popup-body">
+          <div class="mode-toggle">
+            <button class="mode-btn active" data-mode="random">Random</button>
+
+            <button class="mode-btn" data-mode="custom">Custom</button>
+          </div>
+
+          <div class="input-section">
+            <div class="input-group">
+              <label for="array-size-select">Array Size</label>
+
+              <select id="array-size-select">
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+              </select>
+            </div>
+            <div class="custom-input-section">
+              <div class="input-group">
+                <label for="custom-array-input"> Enter Array </label>
+
+                <input
+                  type="text"
+                  id="custom-array-input"
+                  placeholder="Example: 10, 5, 7, 2, 9"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="popup-message" id="popup-message"></div>
+          <div class="action-section">
+            <button id="generateArrayButton">Generate Array</button>
+          </div>
+        </div>
+        <div class="popup-footer"></div>
+      </div>
+    </div>
     <script src="../js/utils.js"></script>
     <script src="../js/renderer.js"></script>
     <script src="../js/bubbleSort.js"></script>
+    <script src="../js/popup.js"></script>
   </body>
 </html>

@@ -1,10 +1,9 @@
-function generateRandomArray() {
+function generateRandomArray(arraySize) {
   const randomNumbers = [];
-  const arrayLength = 5;
   const min = 1;
   const max = 50;
 
-  for (let i = 0; i < arrayLength; i++) {
+  for (let i = 0; i < arraySize; i++) {
     const randomNum = Math.floor(Math.random() * (max - min + 1)) + min;
 
     randomNumbers.push(randomNum);
