@@ -31,6 +31,7 @@ const generateArrayButton = document.querySelector("#generateArrayButton");
 const arraySizeSelect = document.querySelector("#array-size-select");
 
 generateArrayButton.addEventListener("click", () => {
+  emptyState.style.display = "none";
   const activeModeButton = document.querySelector(".mode-btn.active");
   console.log(activeModeButton.dataset.mode);
   const arraySize = Number(arraySizeSelect.value);
@@ -64,11 +65,11 @@ generateArrayButton.addEventListener("click", () => {
       return;
     }
     if (customArray.some(Number.isNaN)) {
-      showPopupMessage("Please enter only positive integers.");
+      showPopupMessage("Please enter only integers.");
       return;
     }
-    if (customArray.some((value) => value <= 0 || !Number.isInteger(value))) {
-      alert("Please enter only positive integers.");
+    if (customArray.some((value) => !Number.isInteger(value))) {
+      showPopupMessage("Please enter only integers.");
       return;
     }
     hidePopupMessage();

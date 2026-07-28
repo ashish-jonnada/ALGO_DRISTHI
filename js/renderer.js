@@ -11,8 +11,12 @@ function createGraphContainer() {
 }
 
 const MAX_BAR_HEIGHT = 300;
+const MIN_BAR_HEIGHT = 5;
 function renderBars(randomArray, graphContainer) {
   const maxValue = Math.max(...randomArray);
+  const minValue = Math.min(...randomArray);
+  const shift = minValue < 0 ? Math.abs(minValue) : 0;
+  const adjustedMax = maxValue + shift;
   const barsContainer = document.createElement("div");
   barsContainer.className = "bars-container";
   for (const nums of randomArray) {
@@ -26,9 +30,14 @@ function renderBars(randomArray, graphContainer) {
     column.appendChild(span);
     column.appendChild(bar);
     barsContainer.appendChild(column);
-    const barHeight = (nums / maxValue) * MAX_BAR_HEIGHT;
-
-    bar.style.height = `${barHeight}px`;
+    const adjustedValue = nums + shift;
+    let barHeight;
+    if (adjustedMax === 0) {
+      barHeight = 5;
+    } else {
+      barHeight = (adjustedValue / adjustedMax) * MAX_BAR_HEIGHT;
+    }
+    bar.style.height = `${Math.max(barHeight, MIN_BAR_HEIGHT)}px`;
   }
   graphContainer.appendChild(barsContainer);
 }

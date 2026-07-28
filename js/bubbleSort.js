@@ -6,6 +6,8 @@ const previous = document.querySelector("#previousButton");
 
 const resetbutton = document.querySelector("#resetButton");
 
+const emptyState = document.getElementById("empty-state");
+
 start.addEventListener("click", () => {
   unhideButtons();
   hideButtons();
@@ -349,13 +351,22 @@ previous.addEventListener("click", () => {
 });
 
 resetbutton.addEventListener("click", () => {
-  currentStep = 0;
-
+  emptyState.style.display = "flex";
+  isStartEnabled = true;
+  currentStep = -1;
   previous.disabled = true;
   next.disabled = false;
-
-  renderStep(result.steps[0]);
-
+  start.disabled = false;
+  generate.style.display = "inline-block";
+  start.style.display = "inline-block";
+  next.style.display = "none";
+  previous.style.display = "none";
+  resetbutton.style.display = "none";
+  workspace.classList.remove("learning-mode");
+  displayArray(result.originalArray);
+  const graphContainer = createGraphContainer();
+  renderBars(result.originalArray, graphContainer);
+  renderIndices(result.originalArray, graphContainer);
   if (result.steps.length === 1) {
     next.disabled = true;
   }

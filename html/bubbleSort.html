@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../css/arraycard.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="stylesheet" href="../css/buttons.css" />
+    <link rel="stylesheet" href="../css/emptyState.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
       rel="stylesheet"
@@ -122,7 +123,66 @@
       <!-- LEFT SIDE -->
       <div id="left-panel">
         <!-- Visualization -->
-        <div id="visualizer"></div>
+        <div id="visualizer">
+          <div id="empty-state">
+            <div class="bubble-animation">
+              <span class="bubble"></span>
+
+              <span class="bubble active"></span>
+
+              <span class="bubble"></span>
+
+              <span class="arrow">
+                <i class="fa-solid fa-arrow-right-arrow-left"></i>
+              </span>
+            </div>
+
+            <h1 class="empty-title">Bubble <span>Sort</span></h1>
+
+            <h2 class="empty-heading">Ready to Visualize</h2>
+
+            <p class="empty-subtitle">
+              Generate a random array to begin learning Bubble Sort step by
+              step.
+            </p>
+
+            <div class="empty-features">
+              <div class="feature">
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <div>
+                  <h3>Compare adjacent elements</h3>
+
+                  <p>See how neighboring values are compared.</p>
+                </div>
+              </div>
+
+              <div class="feature">
+                <i class="fa-solid fa-right-left"></i>
+
+                <div>
+                  <h3>Swap if required</h3>
+
+                  <p>Watch elements exchange positions.</p>
+                </div>
+              </div>
+
+              <div class="feature">
+                <i class="fa-solid fa-chart-simple"></i>
+
+                <div>
+                  <h3>Watch every iteration</h3>
+
+                  <p>Understand each pass visually.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="empty-divider"></div>
+
+            <p class="empty-footer">Click <span>Generate</span> below ↓</p>
+          </div>
+        </div>
       </div>
 
       <!-- RIGHT SIDE -->
@@ -245,6 +305,7 @@
         <div class="popup-footer"></div>
       </div>
     </div>
+
     <script src="../js/utils.js"></script>
     <script src="../js/renderer.js"></script>
     <script src="../js/bubbleSort.js"></script>
