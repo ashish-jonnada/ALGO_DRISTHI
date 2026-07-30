@@ -1,717 +1,444 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Bubble Sort | AlgoDrishti</title>
 
-    <link rel="stylesheet" href="learn.css">
+    <link rel="stylesheet" href="learn.css" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+  </head>
 
-</head>
+  <body>
+    <!-- ================= NAVBAR ================= -->
 
-<body>
-
-<!-- ================= NAVBAR ================= -->
-
-<nav>
-
-    <div class="logo">
-
-
+    <nav>
+      <div class="logo">
         <div>
-            <img class="logo1" src="../assets/log0.png">
-
-
-
+          <img class="logo1" src="../assets/log0.png" />
         </div>
+      </div>
 
-    </div>
-
-    <ul>
-
+      <ul>
         <li>Home</li>
         <li class="active">Learn</li>
         <li>Visualizer</li>
         <li>Practice</li>
+      </ul>
+    </nav>
 
-    </ul>
+    <!-- ================= HERO ================= -->
 
-</nav>
+    <section class="hero">
+      <div class="hero-left">
+        <div class="tag">Bubble Sort</div>
 
-<!-- ================= HERO ================= -->
+        <h1>
+          Learn Bubble Sort
+          <span>Visually.</span>
+        </h1>
 
-<section class="hero">
+        <p>
+          Bubble Sort is one of the easiest sorting algorithms. Learn its
+          working, logic and visualization in an interactive way.
+        </p>
 
-<div class="hero-left">
-
-    <div class="tag">
-
-        Bubble Sort
-
-    </div>
-
-    <h1>
-
-        Learn Bubble Sort
-        <span>Visually.</span>
-
-    </h1>
-
-    <p>
-
-        Bubble Sort is one of the easiest sorting algorithms.
-
-        Learn its working, logic and visualization in an interactive way.
-
-    </p>
-
-    <div class="badges">
-
-        <div class="badge">
-
+        <div class="badges">
+          <div class="badge">
             <i class="fa-solid fa-signal"></i>
 
             Easy
+          </div>
 
+          <div class="badge">Beginner Friendly</div>
+
+          <div class="badge">Sorting</div>
         </div>
 
-        <div class="badge">
+        <div class="buttons">
+          <button class="btn1">Start Learning</button>
 
-            Beginner Friendly
-
+          <button class="btn2">Open Visualizer</button>
         </div>
+      </div>
 
-        <div class="badge">
-
-            Sorting
-
+      <div class="hero-right">
+        <div class="hero-image">
+          <img class="bobble" src="../assets/bobblesortlogo.png" />
         </div>
+      </div>
+    </section>
 
-    </div>
+    <!-- ================= LEARNING GRID ================= -->
 
-    <div class="buttons">
+    <section class="learn-grid">
+      <!-- Card 1 -->
 
-        <button class="btn1">
+      <div class="learn-card">
+        <div class="card-header">
+          <div class="card-icon green">
+            <i class="fa-solid fa-book-open"></i>
+          </div>
 
-            Start Learning
-
-        </button>
-
-        <button class="btn2">
-
-            Open Visualizer
-
-        </button>
-
-    </div>
-
-</div>
-
-<div class="hero-right">
-
-    <div class="hero-image">
-
-        <img class="bobble" src="../assets/bobblesortlogo.png">
-
-    </div>
-
-</div>
-
-</section>
-
-<!-- ================= LEARNING GRID ================= -->
-
-<section class="learn-grid">
-
-    <!-- Card 1 -->
-
-    <div class="learn-card">
-
-<div class="card-header">
-
-    <div class="card-icon green">
-        <i class="fa-solid fa-book-open"></i>
-    </div>
-
-    <h2 class="green-title">
-        What is Bubble Sort?
-    </h2>
-
-</div>
+          <h2 class="green-title">What is Bubble Sort?</h2>
+        </div>
 
         <p>
-
-            Bubble Sort is one of the simplest sorting algorithms.
-
-            It repeatedly compares two adjacent elements and swaps them
-
-            whenever they are in the wrong order.
-
-            After every pass, the largest unsorted element
-
-            automatically moves to the end of the array.
-
+          Bubble Sort is one of the simplest sorting algorithms. It repeatedly
+          compares two adjacent elements and swaps them whenever they are in the
+          wrong order. After every pass, the largest unsorted element
+          automatically moves to the end of the array.
         </p>
+      </div>
 
-    </div>
+      <!-- Card 2 -->
 
-    <!-- Card 2 -->
+      <div class="learn-card">
+        <div class="card-header">
+          <div class="card-icon blue">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </div>
 
-    <div class="learn-card">
-
-<div class="card-header">
-
-    <div class="card-icon blue">
-        <i class="fa-solid fa-graduation-cap"></i>
-    </div>
-
-    <h2 class="blue-title">
-        Why Learn Bubble Sort?
-    </h2>
-
-</div>
+          <h2 class="blue-title">Why Learn Bubble Sort?</h2>
+        </div>
 
         <ul>
+          <li>Easy for beginners</li>
 
-            <li>Easy for beginners</li>
+          <li>Builds sorting fundamentals</li>
 
-            <li>Builds sorting fundamentals</li>
+          <li>Improves problem-solving skills</li>
 
-            <li>Improves problem-solving skills</li>
+          <li>Helps understand swapping</li>
 
-            <li>Helps understand swapping</li>
-
-            <li>Foundation for advanced algorithms</li>
-
+          <li>Foundation for advanced algorithms</li>
         </ul>
+      </div>
+    </section>
 
-    </div>
+    <!-- ================= PHASE 3 ================= -->
 
-</section>
+    <section class="learn-grid">
+      <!-- Real Life Analogy -->
 
-<!-- ================= PHASE 3 ================= -->
-
-<section class="learn-grid">
-
-    <!-- Real Life Analogy -->
-
-    <div class="learn-card">
-
+      <div class="learn-card">
         <div class="card-header">
+          <div class="card-icon orange">
+            <i class="fa-solid fa-lightbulb"></i>
+          </div>
 
-            <div class="card-icon orange">
-
-                <i class="fa-solid fa-lightbulb"></i>
-
-            </div>
-
-            <h2 class="orange-title">
-
-                Real Life Analogy
-
-            </h2>
-
+          <h2 class="orange-title">Real Life Analogy</h2>
         </div>
-    <div class="new">
-        
-
-            <div class="analogy-image">
-
-                🫧
-
-            </div>
-            <div classs="para">
+        <div class="new">
+          <div class="analogy-image">🫧</div>
+          <div classs="para">
             <p>
-
-                Imagine bubbles rising in water.
-
-                During every pass, the largest element slowly rises to
-
-                the end of the array just like the biggest bubble
-
-                rises to the surface.
-
+              Imagine bubbles rising in water. During every pass, the largest
+              element slowly rises to the end of the array just like the biggest
+              bubble rises to the surface.
             </p>
-            </div>
+          </div>
+        </div>
+      </div>
 
-        
-    </div>
+      <!-- How Bubble Sort Thinks -->
 
-    </div>
-
-
-
-    <!-- How Bubble Sort Thinks -->
-
-    <div class="learn-card">
-
+      <div class="learn-card">
         <div class="card-header">
+          <div class="card-icon purple">
+            <i class="fa-solid fa-brain"></i>
+          </div>
 
-            <div class="card-icon purple">
-
-                <i class="fa-solid fa-brain"></i>
-
-            </div>
-
-            <h2 class="purple-title">
-
-                How Bubble Sort Thinks
-
-            </h2>
-
+          <h2 class="purple-title">How Bubble Sort Thinks</h2>
         </div>
 
         <div class="flow">
+          <div class="flow-step compare">🔍 Compare</div>
 
-            <div class="flow-step compare">
+          <div class="flow-arrow">
+            <i class="fa-solid fa-arrow-down"></i>
+          </div>
 
-                🔍 Compare
+          <div class="flow-step swap">🔄 Swap</div>
 
-            </div>
+          <div class="flow-arrow">
+            <i class="fa-solid fa-arrow-down"></i>
+          </div>
 
-            <div class="flow-arrow">
+          <div class="flow-step move">➜ Move Forward</div>
 
-                <i class="fa-solid fa-arrow-down"></i>
+          <div class="flow-arrow">
+            <i class="fa-solid fa-arrow-down"></i>
+          </div>
 
-            </div>
-
-            <div class="flow-step swap">
-
-                🔄 Swap
-
-            </div>
-
-            <div class="flow-arrow">
-
-                <i class="fa-solid fa-arrow-down"></i>
-
-            </div>
-
-            <div class="flow-step move">
-
-                ➜ Move Forward
-
-            </div>
-
-            <div class="flow-arrow">
-
-                <i class="fa-solid fa-arrow-down"></i>
-
-            </div>
-
-            <div class="flow-step repeat">
-
-                🔁 Repeat Until Sorted
-
-            </div>
-
+          <div class="flow-step repeat">🔁 Repeat Until Sorted</div>
         </div>
+      </div>
+    </section>
 
-    </div>
+    <!-- ================= PHASE 4 ================= -->
 
-</section>
-
-<!-- ================= PHASE 4 ================= -->
-
-<section class="characteristics">
-
-    <div class="section-heading">
-
+    <section class="characteristics">
+      <div class="section-heading">
         <i class="fa-solid fa-star"></i>
 
         <h2>Key Characteristics</h2>
+      </div>
 
-    </div>
-
-    <div class="feature-grid">
-
+      <div class="feature-grid">
         <div class="feature-box">
+          <div class="feature-icon green">
+            <i class="fa-solid fa-code-compare"></i>
+          </div>
 
-            <div class="feature-icon green">
-                <i class="fa-solid fa-code-compare"></i>
-            </div>
+          <h3>Comparison Based</h3>
 
-            <h3>Comparison Based</h3>
-
-            <p>Sorts elements by comparing adjacent values.</p>
-
+          <p>Sorts elements by comparing adjacent values.</p>
         </div>
 
         <div class="feature-box">
+          <div class="feature-icon blue">
+            <i class="fa-solid fa-shield"></i>
+          </div>
 
-            <div class="feature-icon blue">
-                <i class="fa-solid fa-shield"></i>
-            </div>
+          <h3>Stable Algorithm</h3>
 
-            <h3>Stable Algorithm</h3>
-
-            <p>Equal elements keep their original order.</p>
-
+          <p>Equal elements keep their original order.</p>
         </div>
 
         <div class="feature-box">
+          <div class="feature-icon orange">
+            <i class="fa-solid fa-database"></i>
+          </div>
 
-            <div class="feature-icon orange">
-                <i class="fa-solid fa-database"></i>
-            </div>
+          <h3>In-place</h3>
 
-            <h3>In-place</h3>
-
-            <p>Requires only constant extra memory.</p>
-
+          <p>Requires only constant extra memory.</p>
         </div>
 
         <div class="feature-box">
+          <div class="feature-icon purple">
+            <i class="fa-solid fa-code"></i>
+          </div>
 
-            <div class="feature-icon purple">
-                <i class="fa-solid fa-code"></i>
-            </div>
+          <h3>Simple Logic</h3>
 
-            <h3>Simple Logic</h3>
-
-            <p>Very easy to understand and implement.</p>
-
+          <p>Very easy to understand and implement.</p>
         </div>
 
         <div class="feature-box">
+          <div class="feature-icon cyan">
+            <i class="fa-solid fa-repeat"></i>
+          </div>
 
-            <div class="feature-icon cyan">
-                <i class="fa-solid fa-repeat"></i>
-            </div>
+          <h3>Iterative</h3>
 
-            <h3>Iterative</h3>
-
-            <p>Uses repeated passes until sorted.</p>
-
+          <p>Uses repeated passes until sorted.</p>
         </div>
 
         <div class="feature-box">
+          <div class="feature-icon red">
+            <i class="fa-solid fa-bolt"></i>
+          </div>
 
-            <div class="feature-icon red">
-                <i class="fa-solid fa-bolt"></i>
-            </div>
+          <h3>Early Exit</h3>
 
-            <h3>Early Exit</h3>
-
-            <p>Stops if no swaps occur in a pass.</p>
-
+          <p>Stops if no swaps occur in a pass.</p>
         </div>
+      </div>
+    </section>
 
-    </div>
+    <!-- ================= PHASE 5 ================= -->
 
-</section>
+    <section class="learn-grid">
+      <!-- When to Use -->
 
-
-<!-- ================= PHASE 5 ================= -->
-
-<section class="learn-grid">
-
-    <!-- When to Use -->
-
-    <div class="learn-card">
-
+      <div class="learn-card">
         <div class="card-header">
+          <div class="card-icon use-icon">
+            <i class="fa-solid fa-circle-check"></i>
+          </div>
 
-            <div class="card-icon use-icon">
-
-                <i class="fa-solid fa-circle-check"></i>
-
-            </div>
-
-            <h2 class="use-title">
-
-                When to Use
-
-            </h2>
-
+          <h2 class="use-title">When to Use</h2>
         </div>
 
         <div class="points">
+          <div class="point">
+            <i class="fa-solid fa-check"></i>
 
-            <div class="point">
+            <span>Small datasets</span>
+          </div>
 
-                <i class="fa-solid fa-check"></i>
+          <div class="point">
+            <i class="fa-solid fa-check"></i>
 
-                <span>Small datasets</span>
+            <span>Learning DSA concepts</span>
+          </div>
 
-            </div>
+          <div class="point">
+            <i class="fa-solid fa-check"></i>
 
-            <div class="point">
+            <span>Teaching algorithms</span>
+          </div>
 
-                <i class="fa-solid fa-check"></i>
+          <div class="point">
+            <i class="fa-solid fa-check"></i>
 
-                <span>Learning DSA concepts</span>
-
-            </div>
-
-            <div class="point">
-
-                <i class="fa-solid fa-check"></i>
-
-                <span>Teaching algorithms</span>
-
-            </div>
-
-            <div class="point">
-
-                <i class="fa-solid fa-check"></i>
-
-                <span>Simple academic projects</span>
-
-            </div>
-
+            <span>Simple academic projects</span>
+          </div>
         </div>
+      </div>
 
-    </div>
+      <!-- When NOT to Use -->
 
-    <!-- When NOT to Use -->
-
-    <div class="learn-card">
-
+      <div class="learn-card">
         <div class="card-header">
+          <div class="card-icon danger-icon">
+            <i class="fa-solid fa-circle-xmark"></i>
+          </div>
 
-            <div class="card-icon danger-icon">
-
-                <i class="fa-solid fa-circle-xmark"></i>
-
-            </div>
-
-            <h2 class="danger-title">
-
-                When NOT to Use
-
-            </h2>
-
+          <h2 class="danger-title">When NOT to Use</h2>
         </div>
 
         <div class="points">
+          <div class="danger-point">
+            <i class="fa-solid fa-xmark"></i>
 
-            <div class="danger-point">
+            <span>Large datasets</span>
+          </div>
 
-                <i class="fa-solid fa-xmark"></i>
+          <div class="danger-point">
+            <i class="fa-solid fa-xmark"></i>
 
-                <span>Large datasets</span>
+            <span>Performance critical software</span>
+          </div>
 
-            </div>
+          <div class="danger-point">
+            <i class="fa-solid fa-xmark"></i>
 
-            <div class="danger-point">
+            <span>Real-time applications</span>
+          </div>
 
-                <i class="fa-solid fa-xmark"></i>
+          <div class="danger-point">
+            <i class="fa-solid fa-xmark"></i>
 
-                <span>Performance critical software</span>
-
-            </div>
-
-            <div class="danger-point">
-
-                <i class="fa-solid fa-xmark"></i>
-
-                <span>Real-time applications</span>
-
-            </div>
-
-            <div class="danger-point">
-
-                <i class="fa-solid fa-xmark"></i>
-
-                <span>Production systems</span>
-
-            </div>
-
+            <span>Production systems</span>
+          </div>
         </div>
+      </div>
+    </section>
 
-    </div>
+    <!-- ================= PHASE 6 ================= -->
 
-</section>
+    <section class="learn-grid">
+      <!-- Common Mistakes -->
 
-<!-- ================= PHASE 6 ================= -->
-
-<section class="learn-grid">
-
-    <!-- Common Mistakes -->
-
-    <div class="learn-card">
-
+      <div class="learn-card">
         <div class="card-header">
+          <div class="card-icon warning-icon">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+          </div>
 
-            <div class="card-icon warning-icon">
-
-                <i class="fa-solid fa-triangle-exclamation"></i>
-
-            </div>
-
-            <h2 class="warning-title">
-
-                Common Mistakes
-
-            </h2>
-
+          <h2 class="warning-title">Common Mistakes</h2>
         </div>
 
         <div class="mistake-list">
+          <div class="mistake">
+            <i class="fa-solid fa-circle-xmark"></i>
 
-            <div class="mistake">
+            <span>Using incorrect loop boundaries.</span>
+          </div>
 
-                <i class="fa-solid fa-circle-xmark"></i>
+          <div class="mistake">
+            <i class="fa-solid fa-circle-xmark"></i>
 
-                <span>Using incorrect loop boundaries.</span>
+            <span>Swapping without checking the condition.</span>
+          </div>
 
-            </div>
+          <div class="mistake">
+            <i class="fa-solid fa-circle-xmark"></i>
 
-            <div class="mistake">
+            <span>Accessing invalid array indices.</span>
+          </div>
 
-                <i class="fa-solid fa-circle-xmark"></i>
+          <div class="mistake">
+            <i class="fa-solid fa-circle-xmark"></i>
 
-                <span>Swapping without checking the condition.</span>
-
-            </div>
-
-            <div class="mistake">
-
-                <i class="fa-solid fa-circle-xmark"></i>
-
-                <span>Accessing invalid array indices.</span>
-
-            </div>
-
-            <div class="mistake">
-
-                <i class="fa-solid fa-circle-xmark"></i>
-
-                <span>Forgetting the early-exit optimization.</span>
-
-            </div>
-
+            <span>Forgetting the early-exit optimization.</span>
+          </div>
         </div>
+      </div>
 
-    </div>
+      <!-- Tips -->
 
-    <!-- Tips -->
-
-    <div class="learn-card">
-
+      <div class="learn-card">
         <div class="card-header">
+          <div class="card-icon tip-icon">
+            <i class="fa-solid fa-lightbulb"></i>
+          </div>
 
-            <div class="card-icon tip-icon">
-
-                <i class="fa-solid fa-lightbulb"></i>
-
-            </div>
-
-            <h2 class="tip-title">
-
-                Tips to Remember
-
-            </h2>
-
+          <h2 class="tip-title">Tips to Remember</h2>
         </div>
 
         <div class="tip-box">
+          <h3>💡 Golden Rule</h3>
 
-            <h3>
-
-                💡 Golden Rule
-
-            </h3>
-
-            <p>
-
-                "After every pass, the largest unsorted element
-                moves to the end of the array."
-
-            </p>
-
+          <p>
+            "After every pass, the largest unsorted element moves to the end of
+            the array."
+          </p>
         </div>
 
         <div class="remember-list">
+          <div class="remember">✔ Compare adjacent elements only</div>
 
-            <div class="remember">
+          <div class="remember">✔ Bubble means largest element rises</div>
 
-                ✔ Compare adjacent elements only
+          <div class="remember">✔ Stop when no swaps occur</div>
 
-            </div>
-
-            <div class="remember">
-
-                ✔ Bubble means largest element rises
-
-            </div>
-
-            <div class="remember">
-
-                ✔ Stop when no swaps occur
-
-            </div>
-
-            <div class="remember">
-
-                ✔ Think pass-by-pass instead of the whole array
-
-            </div>
-
+          <div class="remember">
+            ✔ Think pass-by-pass instead of the whole array
+          </div>
         </div>
+      </div>
+    </section>
 
-    </div>
+    <!-- ================= PHASE 7 ================= -->
 
-</section>
-
-<!-- ================= PHASE 7 ================= -->
-
-<section class="cta-section">
-
-    <div class="cta-card">
-
+    <section class="cta-section">
+      <div class="cta-card">
         <div class="cta-icon">
-
-            <i class="fa-solid fa-trophy"></i>
-
+          <i class="fa-solid fa-trophy"></i>
         </div>
 
-        <h2>
-
-            Congratulations!
-
-        </h2>
+        <h2>Congratulations!</h2>
 
         <p>
-
-            You have successfully completed the Bubble Sort learning module.
-
-            Now it's time to visualize the algorithm step by step and
-
-            understand how every comparison and swap happens.
-
+          You have successfully completed the Bubble Sort learning module. Now
+          it's time to visualize the algorithm step by step and understand how
+          every comparison and swap happens.
         </p>
 
         <div class="cta-buttons">
+          <a href="../html/bubbleSort.html" class="primary-btn">
+            <i class="fa-solid fa-play"></i>
 
-            <a href="visualizer.html" class="primary-btn">
-
-                <i class="fa-solid fa-play"></i>
-
-                Explore Visualizer
-
-            </a>
-
-         
-
+            Explore Visualizer
+          </a>
         </div>
-
-    </div>
-
-</section>
-
-
-</body>
-
+      </div>
+    </section>
+  </body>
 </html>
