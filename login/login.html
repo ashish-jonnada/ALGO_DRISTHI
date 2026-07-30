@@ -1,180 +1,137 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AlgoDrishti Login</title>
 
     <!-- Poppins -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Icons -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
 
-    <link rel="stylesheet" href="../login/login.css">
-   
-</head>
+    <link rel="stylesheet" href="../login/login.css" />
+  </head>
 
-<body>
+  <body>
     <section class="container">
-    <div class="background">
-        <div class="a"> <img  class="logoimage" src="../assets/log0.png"></div>
-        
-        <img  class="backgroundimage" src="../assets/back1.jpeg">
-    </div>
+      <div class="background">
+        <div class="a"><img class="logoimage" src="../assets/log0.png" /></div>
 
-   <div class="right">
-    <div class="login-card">
+        <img class="backgroundimage" src="../assets/back1.jpeg" />
+      </div>
 
-        <!-- Tabs -->
+      <div class="right">
+        <div class="login-card">
+          <!-- Tabs -->
 
-        <div class="tabs">
-
+          <div class="tabs">
             <button id="loginTab" class="active">Login</button>
 
             <button id="signupTab">Sign Up</button>
+          </div>
 
-        </div>
+          <!-- Title -->
 
-        <!-- Title -->
-
-        <div class="title">
-
+          <div class="title">
             <h2 id="formTitle">Welcome Back! 👋</h2>
 
-            <p  id="formSubtitle">Login to continue your learning journey</p>
+            <p id="formSubtitle">Login to continue your learning journey</p>
+          </div>
 
-        </div>
+          <!-- Form -->
 
-        <!-- Form -->
+          <form>
+            <div id="fullNameField" style="display: none">
+              <label>Full Name</label>
 
-        <form>
-            <div id="fullNameField" style="display:none;">
+              <div class="input-box">
+                <i class="fa-regular fa-user"></i>
 
-    <label>Full Name</label>
-
-    <div class="input-box">
-
-        <i class="fa-regular fa-user"></i>
-
-        <input type="text" placeholder="Enter your full name">
-
-    </div>
-
-</div>
+                <input type="text" placeholder="Enter your full name" />
+              </div>
+            </div>
             <label>Email</label>
 
             <div class="input-box">
+              <i class="fa-regular fa-envelope"></i>
 
-                <i class="fa-regular fa-envelope"></i>
-
-                <input type="email"
-                    placeholder="Enter your email">
-
+              <input type="email" placeholder="Enter your email" />
             </div>
 
             <label>Password</label>
 
             <div class="input-box">
+              <i class="fa-solid fa-lock"></i>
 
-                <i class="fa-solid fa-lock"></i>
+              <input type="password" placeholder="Enter your password" />
 
-                <input type="password"
-                    placeholder="Enter your password">
-
-                <i class="fa-regular fa-eye eye"></i>
-
+              <i class="fa-regular fa-eye eye"></i>
             </div>
 
+            <div id="confirmPasswordField" style="display: none">
+              <label>Confirm Password</label>
 
-            <div id="confirmPasswordField" style="display:none;">
-
-                <label>Confirm Password</label>
-
-                <div class="input-box">
-
+              <div class="input-box">
                 <i class="fa-solid fa-lock"></i>
 
-                <input type="password" placeholder="Confirm password">
-
+                <input type="password" placeholder="Confirm password" />
+              </div>
             </div>
-
-</div>
-
-
 
             <div class="options" id="loginOptions">
+              <label>
+                <input type="checkbox" />
 
-                <label>
+                Remember me
+              </label>
 
-                    <input type="checkbox">
-
-                    Remember me
-
-                </label>
-
-                <a href="#">Forgot Password?</a>
-
+              <a href="#">Forgot Password?</a>
             </div>
 
-            <button class="login-btn"  id="submitBtn">
+            <button class="login-btn" id="submitBtn">
+              Login
 
-                Login
-
-                <i class="fa-solid fa-arrow-right"></i>
-
+              <i class="fa-solid fa-arrow-right"></i>
             </button>
+          </form>
 
-        </form>
-
-        <div class="divider">
-
+          <div class="divider">
             <span>Or</span>
+          </div>
 
-        </div>
-
-        <div class="social">
-
+          <div class="social">
             <button>
-
-                <i class="fa-brands fa-google"></i>
-
+              <i class="fa-brands fa-google"></i>
             </button>
 
             <button>
-
-                <i class="fa-brands fa-github"></i>
-
+              <i class="fa-brands fa-github"></i>
             </button>
 
             <button>
-
-                <i class="fa-brands fa-microsoft"></i>
-
+              <i class="fa-brands fa-microsoft"></i>
             </button>
+          </div>
 
-        </div>
-
-        <p class="bottom">
-
+          <p class="bottom">
             Don't have an account?
 
             <a href="#">Sign Up</a>
-
-        </p>
-
-    </div>
-    <div id="signupForm">
-
-    <!-- Signup form -->
-
-    </div>
-    </div>
-  </section>
-  <script src="../js/login.js"></script>
-</body>
-
+          </p>
+        </div>
+        <div id="signupForm">
+          <!-- Signup form -->
+        </div>
+      </div>
+    </section>
+    <script src="../login/login.js"></script>
+  </body>
 </html>
